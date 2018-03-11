@@ -58,7 +58,57 @@ html {
 button .visible {
     display: block;
 }
-.ulControl-Cont{
+.container2{
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+
+}
+.slider1 ul {
+    list-style: none;
+    display: flex;
+    margin-right: 1.5em;
 
 }
 
+.slider1 li{
+    display: none;
+    margin: 0 auto;
+
+}
+.slider1 li img{
+    height: 400px;
+    width: 600px;
+
+}
+
+.slider1 ul .visible{
+    display: inline-block;
+}
+.slider1 {
+    background-color: gray;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.ulControl1 {
+    display: flex;
+    justify-content: center;
+}
+
+.empty{
+    display: inline-block;
+}
+
+.full {
+    display: none;
+}
+.ulControl1 .visible{
+    display: inline-block;
+}
+#firstSlide, #secSlide {
+    color: white;
+}

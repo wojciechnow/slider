@@ -75,5 +75,50 @@ pause.addEventListener('click',function () {
 
 })
 
+    var picsAll = document.querySelectorAll('.slider1 li');
+
+    var iconEmpty= document.querySelectorAll('.ulControl1 .empty');
+    var iconFull= document.querySelectorAll('.ulControl1 .full');
+    console.log(iconFull, iconEmpty)
+    var photoIndex = 0;
+
+
+
+    picsAll[photoIndex].classList.add('visible');
+
+    iconEmpty[photoIndex].classList.add('full');
+
+    iconFull[photoIndex].classList.add('visible');
+
+    var show = setInterval(function () {
+        if (photoIndex === picsAll.length-1){
+            picsAll[photoIndex].classList.remove('visible');
+            iconFull[photoIndex].classList.remove('visible');
+            iconEmpty[photoIndex].classList.remove('full')
+
+            photoIndex=0;
+            iconFull[photoIndex].classList.add('visible');
+            iconEmpty[photoIndex].classList.add('full')
+
+            picsAll[photoIndex].classList.add('visible')
+        }else{
+            picsAll[photoIndex].classList.remove('visible');
+            iconFull[photoIndex].classList.remove('visible');
+            iconEmpty[photoIndex].classList.remove('full')
+            photoIndex ++;
+            picsAll[photoIndex].classList.add('visible');
+            iconFull[photoIndex].classList.add('visible');
+            iconEmpty[photoIndex].classList.add('full')
+
+
+
+        }
+
+    },1000)
+
+
+
+
+
 });
 
